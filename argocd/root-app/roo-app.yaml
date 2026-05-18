@@ -8,8 +8,8 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/Huycon2352/Devsecops.git
-    targetRevision: br1
+    repoURL: https://github.com/tehn145/retail-store-sample-app
+    targetRevision: main
     path: argocd/app-app
 
   destination:
