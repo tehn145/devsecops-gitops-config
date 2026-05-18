@@ -49,6 +49,6 @@ images:
   # - name: redis
   #   newTag: 6.0-dev
 
-  - name: ghcr.io/huycon2352/ui
+  - name: ui
     newName: 252457242399.dkr.ecr.ap-southeast-1.amazonaws.com/devsecops-dev-ui
     newTag: latest
