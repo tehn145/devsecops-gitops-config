@@ -14,25 +14,25 @@ commonLabels:
   environment: dev
 
 images:
-  # - name: ghcr.io/huycon2352/catalog
-  #   newName: public.ecr.aws/aws-containers/retail-store-sample-catalog
-  #   newTag: dev
+  # - name: 252457242399.dkr.ecr.ap-southeast-1.amazonaws.com/devsecops-dev-catalog
+  #   newName: 252457242399.dkr.ecr.ap-southeast-1.amazonaws.com/devsecops-dev-catalog
+  #   newTag: 9d40c42dfe6eb9e45d8d7af5feaf4975a43046dd
 
   # - name: mysql
   #   newName: public.ecr.aws/docker/library/mysql
   #   newTag: 8.0-dev
 
-  # - name: ghcr.io/huycon2352/carts
-  #   newName: public.ecr.aws/aws-containers/retail-store-sample-cart
-  #   newTag: dev
+  # - name: 252457242399.dkr.ecr.ap-southeast-1.amazonaws.com/devsecops-dev-carts
+  #   newName: 252457242399.dkr.ecr.ap-southeast-1.amazonaws.com/devsecops-dev-carts
+  #   newTag: 9d40c42dfe6eb9e45d8d7af5feaf4975a43046dd
 
   # - name: amazon/dynamodb-local
   #   newName: public.ecr.aws/aws-dynamodb-local/aws-dynamodb-local
   #   newTag: latest
 
-  # - name: ghcr.io/huycon2352/orders
-  #   newName: public.ecr.aws/aws-containers/retail-store-sample-orders
-  #   newTag: dev
+  # - name: 252457242399.dkr.ecr.ap-southeast-1.amazonaws.com/devsecops-dev-orders
+  #   newName: 252457242399.dkr.ecr.ap-southeast-1.amazonaws.com/devsecops-dev-orders
+  #   newTag: 9d40c42dfe6eb9e45d8d7af5feaf4975a43046dd
 
   # - name: postgres
   #   newName: public.ecr.aws/docker/library/postgres
@@ -43,8 +43,8 @@ images:
   #   newTag: 3-management-dev
 
   # - name: ghcr.io/huycon2352/checkout
-  #   newName: public.ecr.aws/aws-containers/retail-store-sample-checkout
-  #   newTag: dev
+  #   newName: 252457242399.dkr.ecr.ap-southeast-1.amazonaws.com/devsecops-dev-checkout
+  #   newTag: 9d40c42dfe6eb9e45d8d7af5feaf4975a43046dd
 
   # - name: redis
   #   newTag: 6.0-dev
