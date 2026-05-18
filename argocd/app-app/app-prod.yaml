@@ -1,29 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: devsecops-prod
+  name: prod
   namespace: argocd
-  annotations:
-    notifications.argoproj.io/subscribe.on-health-degraded.slack: platform-alerts
-    notifications.argoproj.io/subscribe.on-sync-failed.slack: platform-alerts
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
+
 spec:
   project: default
+
   source:
     repoURL: https://github.com/Huycon2352/Devsecops.git
     targetRevision: main
     path: k8s/overlays/prod
+
   destination:
     server: https://kubernetes.default.svc
-    namespace: devsecops-prod
+    namespace: prod
+
   syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
-      - RespectIgnoreDifferences=true
-  revisionHistoryLimit: 10
-  ignoreDifferences:
-    - group: apps
-      kind: Deployment
-      jsonPointers:
-        - /spec/replicas
+    automated:
+      prune: true
+      selfHeal: true
