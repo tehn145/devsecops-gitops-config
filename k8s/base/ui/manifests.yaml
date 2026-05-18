@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ui
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ui-config
+data:
+  CATALOG_URL: http://catalog
+  CARTS_URL: http://carts
+  ORDERS_URL: http://orders
+  CHECKOUT_URL: http://checkout
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ui
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: ui
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ui
+  template:
+    metadata:
+      labels:
+        app: ui
+    spec:
+      serviceAccountName: ui
+      containers:
+        - name: ui
+          image: ghcr.io/huycon2352/ui:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: ui-config
