@@ -9,7 +9,7 @@ spec:
 
   source:
     repoURL: https://github.com/Huycon2352/Devsecops.git
-    targetRevision: main
+    targetRevision: br1
     path: k8s/overlays/dev
 
   destination:
